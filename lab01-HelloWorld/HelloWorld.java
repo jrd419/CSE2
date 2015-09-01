@@ -1,5 +1,5 @@
 
-//Jacob Dooleys
+//Jacob Dooley
 //Lab 1
 //Hello World Java Program
 //
