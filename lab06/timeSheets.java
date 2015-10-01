@@ -49,6 +49,7 @@ public class timeSheets{
             //employee's information
             
             //This will get the employee's wages
+            //It also won't let peopel enter negative numbers
             System.out.println("What are employee " + emp + "'s wages?");
             System.out.println("(Enter the information in terms of cents, instead of dollars and cents)");
             while(wage < 0){
@@ -59,6 +60,7 @@ public class timeSheets{
             }
             
             //This will get the employee's hours
+            //It also won't allow people to enter negative numbers
             System.out.println("How many hours did employee" + emp + "work on each of these days?");
             System.out.println("Monday-");
             while(M < 0){
@@ -114,6 +116,8 @@ public class timeSheets{
             F = -1;
             emp++;
         }
+        
+        //This will print the final pay of the employee
         System.out.println("You owe $" + totalpay/100 + " this week to your employees.");
-    } 
+    }  
 }
