@@ -28,9 +28,16 @@ public class areas{
     public static void main(String[] args){
         Scanner myScanner = new Scanner(System.in);
         
+        //This will be a variable that will keep the program in a loop
+        //until the correct input is entered
+        int n = 0;
+        
         //This will prompt the user to enter a character to identify the type of shape
         //That will then enable a switch statement to execute the program
+        //The while statement keeps this running until n = 1
+        while(n != 1){
         System.out.println("What shape would you like to \n calculate the area of?\n Enter 'c' for a circle, 'r' for a rectangle,\n or 't' for a trapazoid");
+        System.out.println("To quit the program enter 'q'");
         char shape = myScanner.next().charAt(0);
         switch(shape){
             case'c':
@@ -42,6 +49,9 @@ public class areas{
                 //Then this calls to the area method, and because there is only
                 //one input, it will automatically calculate for a circle
                 area(radius);
+                
+                //This will incriment n so that it equals 1 and the program terminates
+                n++;
                 break;
                 
             //These next two cases do the same things as teh previous statment
@@ -51,6 +61,7 @@ public class areas{
                 System.out.println("What is the width?");
                 double width = myScanner.nextDouble();
                 area(length, width);
+                n++;
                 break;
             case't':
                 System.out.println("What is base 1?");
@@ -60,7 +71,20 @@ public class areas{
                 System.out.println("What is the height?");
                 double height = myScanner.nextDouble();
                 area(base1, base2, height);
+                n++;
                 break;
+            case 'q':
+                
+                //This incriments n, so that the user can quit the program
+                n++;
+                System.out.println("Goodbye");
+                break;
+            default:
+                
+                //Notice how this doesn't incriment n, so if a correct input isn't
+                //entered, then the while loop continues
+                System.out.println("Please enter a correct input.");
+        }
         }
     }
 }
