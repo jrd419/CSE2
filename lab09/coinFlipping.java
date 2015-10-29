@@ -61,7 +61,7 @@ public class coinFlipping{
     }
     public static void main(String[] args){
         Scanner myScanner = new Scanner(System.in);
-        
+         
         //This will prompt the user to enter the number of flips
         //I'm not going to give the prompt 0-100, because the 
         //program can do much larger numbers
